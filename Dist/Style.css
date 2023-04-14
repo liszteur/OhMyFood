@@ -1,3 +1,26 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: black;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+}
+
+:root {
+  --Primary-color: #9356DC;
+  --Secondary-color: #FF79DA;
+  --Tertiary-color: #99E2D0;
 }/*# sourceMappingURL=Style.css.map */
