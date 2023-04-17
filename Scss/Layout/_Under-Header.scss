@@ -1,17 +1,20 @@
 .Under-Header{
     text-align: center;
     background-color: #F6F6F6;
-    padding-bottom: 70px;
+    padding-bottom: 4.375rem;
+    @media(min-width:65rem){ // 1040px // 
+      padding-bottom: 2.8125rem;
+    }
 
     &__localisation{
       color: #353535;
+      background-color: #EAEAEA;
       box-shadow:inset 0px 2px 4px 0px #d1d1d1;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 500;
-      margin: 0;
-      background-color: #EAEAEA;
+      margin-bottom:2.5rem;
 
        &__logo{
          padding-right: 0.9375rem;
@@ -19,22 +22,16 @@
     }
 
     &__title{
-      margin: 40px 0 0 0;
+      @media(min-width:65rem){ 
+        font-size:2.5rem;
+      }
     }
 
     &__text{
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 300;
       color: #353535;
-      margin-bottom: 45px;
+      margin-bottom: 2.8125rem;
     }
-
-    &__button{
-      color: white;
-      font-weight: 500;
-      padding: 15px 22px;
-      border-radius: 25px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-      background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    }
+    
 }
