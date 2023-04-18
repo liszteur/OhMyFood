@@ -72,6 +72,36 @@ a, a:hover, a:visited {
   margin-bottom: 2.8125rem;
 }
 
+.Fonctionnement {
+  padding: 0 1.25rem;
+}
+@media (min-width: 65rem) {
+  .Fonctionnement {
+    padding: 0 11.25rem;
+  }
+}
+.Fonctionnement__title {
+  margin: 3.125rem 0 1.5625rem 0;
+}
+@media (min-width: 65rem) {
+  .Fonctionnement__title {
+    margin-bottom: 1.5625rem;
+  }
+}
+.Fonctionnement__div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.75rem;
+  gap: 1.5625rem;
+}
+@media (min-width: 65rem) {
+  .Fonctionnement__div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+}
+
 .Button {
   color: white;
   font-weight: 500;
@@ -79,4 +109,37 @@ a, a:hover, a:visited {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.Card {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  position: relative;
+  height: 4.5625rem;
+  margin: 0 0 0 8px;
+  cursor: pointer;
+}
+.Card__number {
+  position: absolute;
+  left: -10px;
+  bottom: 8px;
+  font-size: 0.8125rem;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+}
+.Card__logo {
+  margin: 0 1.75rem 0 2.1875rem;
+  font-size: 1.1875rem;
+  color: #7E7E7E;
+}
+.Card__logo--color {
+  color: #9356DC;
+}
+.Card__text {
+  font-weight: 500;
 }/*# sourceMappingURL=Style.css.map */
