@@ -1,21 +1,25 @@
 .Card{
     display: flex;
     align-items: center;
-    background-color: #F6F6F6;
+    background-color: var(--Background-color);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     position:relative;
     height: 4.5625rem;
     margin:0 0 0 8px;
     cursor: pointer;
-
+    &:hover{
+        .Card__logo{
+            color: #9356DC;
+        }
+    }
 
     &__number{
         position: absolute;
         left: -10px;
         bottom: 8px;
         font-size: 0.8125rem;
-        padding: 4px 8px;
+        padding: 0.25rem 0.5rem;
         border-radius: 50%;
         background-color: #9356DC;
         color: white;
@@ -25,9 +29,6 @@
         margin: 0 1.75rem 0 2.1875rem;
         font-size: 1.1875rem;
         color: #7E7E7E;
-        &--color{
-            color: #9356DC;
-        }
     }
 
     &__text{

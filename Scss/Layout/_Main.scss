@@ -1,0 +1,25 @@
+.Main{
+    background-color: var(--Background-color);
+    padding: 0 1.25rem 4.0625rem 1.25rem;
+    @media(min-width:65rem){
+        padding: 0 10.3125rem 1.875rem 10.3125rem;
+    }
+
+    &__title{
+        padding-top: 3.4375rem;
+        @media(min-width:65rem){
+            margin: 0;
+            padding-block: 1.875rem;
+        }
+    }
+
+    &__nav{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.25rem;
+        @media(min-width:65rem){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.125rem 6.25rem
+        }
+    }
+}

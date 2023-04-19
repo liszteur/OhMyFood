@@ -1,0 +1,81 @@
+.Menu-card{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+
+  &__img{
+    height: 10.875rem;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  &__span{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 2px;
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: #99E2D0;
+    color: #008766;
+  }
+
+  &__figcaption{
+    height: 4.8125rem;
+    padding: 0.9375rem;
+    position: relative;
+  }
+
+  &__title{
+    margin:0;
+    font-size:1.125rem;
+  }
+
+  &__text{
+    margin: 3px 0 0 0 ;
+    font-size:1.0625rem;
+    font-weight: 300;
+  }
+
+  &__logo{
+    position: absolute;
+    top:20px;
+    right: 25px;
+    font-size: 1.75rem;
+
+    &--full{
+      opacity: 0%;
+    &:hover{
+      animation-name: Like;
+      animation-duration: 0.35s;
+      animation-fill-mode: forwards;
+    }
+    }
+  
+  }
+
+
+
+}
+
+
+@keyframes Like{
+  from{
+    opacity: 0%;
+    transform: scale(40%);
+  }75%{
+    transform: scale(125%);
+    opacity: 100%
+  }to{
+    transform: scale(110%);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
+    background-clip: text;
+  }
+}

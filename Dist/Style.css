@@ -23,23 +23,24 @@ a, a:hover, a:visited {
   --Primary-color: #9356DC;
   --Secondary-color: #FF79DA;
   --Tertiary-color: #99E2D0;
+  --Background-color: #F6F6F6;
 }
 
 .Header__title {
   text-align: center;
   font-family: "Shrikhand", sans-serif;
-  margin: 15px 0 5px 0;
+  margin: 0.9375rem 0 0.3125rem 0;
 }
 @media (min-width: 48rem) {
   .Header__title {
-    font-size: 36px;
-    margin: 20px 0 20px 0;
+    font-size: 2.25rem;
+    margin: 1.25rem 0 1.25rem 0;
   }
 }
 
 .Under-Header {
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: var(--Background-color);
   padding-bottom: 4.375rem;
 }
 @media (min-width: 65rem) {
@@ -102,10 +103,40 @@ a, a:hover, a:visited {
   }
 }
 
+.Main {
+  background-color: var(--Background-color);
+  padding: 0 1.25rem 4.0625rem 1.25rem;
+}
+@media (min-width: 65rem) {
+  .Main {
+    padding: 0 10.3125rem 1.875rem 10.3125rem;
+  }
+}
+.Main__title {
+  padding-top: 3.4375rem;
+}
+@media (min-width: 65rem) {
+  .Main__title {
+    margin: 0;
+    padding-block: 1.875rem;
+  }
+}
+.Main__nav {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+}
+@media (min-width: 65rem) {
+  .Main__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.125rem 6.25rem;
+  }
+}
+
 .Button {
   color: white;
   font-weight: 500;
-  padding: 16px 23px;
+  padding: 1rem 1.4375rem;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -114,7 +145,7 @@ a, a:hover, a:visited {
 .Card {
   display: flex;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: var(--Background-color);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   position: relative;
@@ -122,12 +153,15 @@ a, a:hover, a:visited {
   margin: 0 0 0 8px;
   cursor: pointer;
 }
+.Card:hover .Card__logo {
+  color: #9356DC;
+}
 .Card__number {
   position: absolute;
   left: -10px;
   bottom: 8px;
   font-size: 0.8125rem;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   border-radius: 50%;
   background-color: #9356DC;
   color: white;
@@ -137,9 +171,80 @@ a, a:hover, a:visited {
   font-size: 1.1875rem;
   color: #7E7E7E;
 }
-.Card__logo--color {
-  color: #9356DC;
-}
 .Card__text {
   font-weight: 500;
+}
+
+.Menu-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.Menu-card__img {
+  height: 10.875rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.Menu-card__span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-radius: 2px;
+  padding: 0.4375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #99E2D0;
+  color: #008766;
+}
+.Menu-card__figcaption {
+  height: 4.8125rem;
+  padding: 0.9375rem;
+  position: relative;
+}
+.Menu-card__title {
+  margin: 0;
+  font-size: 1.125rem;
+}
+.Menu-card__text {
+  margin: 3px 0 0 0;
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+.Menu-card__logo {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 1.75rem;
+}
+.Menu-card__logo--full {
+  opacity: 0%;
+}
+.Menu-card__logo--full:hover {
+  animation-name: Like;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Like {
+  from {
+    opacity: 0%;
+    transform: scale(40%);
+  }
+  75% {
+    transform: scale(125%);
+    opacity: 100%;
+  }
+  to {
+    transform: scale(110%);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
 }/*# sourceMappingURL=Style.css.map */
