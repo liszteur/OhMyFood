@@ -1,0 +1,52 @@
+@use "../Globals/" as G;
+
+.Footer{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1.5625rem 1.5625rem;
+    background-color:#353535;
+    color: white;
+    gap: 0.4375rem;
+
+    @media(min-width:65rem){
+        flex-direction:row;
+        position: relative;
+        justify-content:end;
+        align-items: end;
+        padding: 0 15.625rem 2.1875rem 0;
+        height: 7.125rem;
+        gap: 1.25rem;
+    }
+
+    &__title{
+        font-family: G.$Secondary-font;
+        font-weight: 400;
+        font-size:1.125rem;
+        margin-bottom: 0.9375rem;
+
+        @media(min-width:65rem){
+            position: absolute;
+            right: 70px;
+            bottom: 20px;
+        }
+    }
+
+    &__logo{
+        margin-right: 0.75rem;
+        width: 0.625rem;
+
+        @media(min-width:65rem){
+            font-size:0.75rem;
+        }
+    }
+
+    &__link{
+        color: white;
+    }
+
+    &--margin{
+        @media(min-width:65rem){
+            margin-right: 1.875rem;
+        }
+    }
+}
