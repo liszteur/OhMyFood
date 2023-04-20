@@ -183,6 +183,29 @@ a, a:hover, a:visited {
   }
 }
 
+.Menu-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.Menu-header__title {
+  font-size: 1.875rem;
+  font-weight: 400;
+  font-family: "Shrikhand", sans-serif;
+  margin: 0.3125rem 0 0.625rem 0;
+}
+@media (min-width: 65rem) {
+  .Menu-header__title {
+    margin: 1.25rem 0 0.9375rem 0;
+  }
+}
+.Menu-header__logo {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+}
+
 .Button {
   color: white;
   font-weight: 500;
@@ -255,6 +278,7 @@ a, a:hover, a:visited {
   height: 4.8125rem;
   padding: 0.9375rem;
   position: relative;
+  color: black;
 }
 .Menu-card__title {
   margin: 0;
@@ -273,10 +297,12 @@ a, a:hover, a:visited {
 }
 .Menu-card__logo--full {
   opacity: 0%;
+  animation-name: A;
+  animation-duration: 0.1s;
 }
 .Menu-card__logo--full:hover {
   animation-name: Like;
-  animation-duration: 0.35s;
+  animation-duration: 0.1s;
   animation-fill-mode: forwards;
 }
 
@@ -292,6 +318,24 @@ a, a:hover, a:visited {
   to {
     transform: scale(110%);
     opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@keyframes A {
+  from {
+    transform: scale(90%);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  to {
+    opacity: 0%;
+    transform: scale(90%);
     color: transparent;
     background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;

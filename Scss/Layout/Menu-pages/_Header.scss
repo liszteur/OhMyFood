@@ -1,0 +1,25 @@
+@use "../../Globals/" as G;
+
+.Menu-header{
+ display: flex;
+ justify-content: center;
+ position: relative;
+
+ &__title{
+    font-size: 1.875rem;
+    font-weight: 400;
+    font-family: G.$Secondary-font;
+    margin: 0.3125rem 0 0.625rem 0;
+    
+    @media(min-width:65rem){
+        margin: 1.25rem 0 0.9375rem 0;
+    }
+ }
+
+ &__logo{
+    font-size:1.25rem;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+ }
+}
