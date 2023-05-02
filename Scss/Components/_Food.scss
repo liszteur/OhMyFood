@@ -1,0 +1,78 @@
+.Food{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    height: 69px;
+
+    &__text{
+        padding: 10px 0 10px 15px;
+
+        &__title{
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 5px 0;
+
+        }
+
+        &__subtitle{
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        &__price{
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+            font-weight: 700;
+            font-size: 13px;
+            transition: 400ms;
+            overflow: hidden;
+        }
+    }
+
+    &__checkmark{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        height: 100%;
+        background-color: var(--Tertiary-color);
+        border-radius: 0 15px 15px 0;
+        overflow: hidden;
+        transition: 400ms;
+
+        &__logo{
+            color: var(--Tertiary-color);
+            padding: 3px 4px;
+            border-radius: 50%;
+            background-color: white;
+            font-size: 14px;
+            animation-name: CheckmarkReversed;
+            animation-duration: 250ms; // Bug visuel si valeur = 400ms
+          }
+
+    }
+
+    &:hover{
+      .Food__checkmark{
+        width: 59px;
+        transition: 400ms; 
+      }
+
+      .Food__checkmark__logo{
+        animation-name: Checkmark;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+      }
+
+      .Food__text__price{
+        right: 74px;
+        transition: 400ms;
+      }
+    }
+}

@@ -1,0 +1,96 @@
+// loader // 
+@keyframes Disparition{
+    to{
+    visibility: hidden;
+    }
+}
+
+@keyframes Logo-spin{
+    from{
+    scale: 0%;
+    }to{
+    transform: rotate(-360deg);
+    scale: 200%;
+    }
+}
+
+@keyframes Quick-spin{
+    from{
+        scale: 0%;
+    }to{
+        scale: 200%;
+        transform: rotate(2400deg);
+    }
+} 
+
+
+
+// Page des Menu // 
+
+@keyframes Checkmark{
+    to{
+     transform: rotate(360deg);
+    }
+}
+
+@keyframes CheckmarkReversed {
+  to{
+      transform: rotate(-360deg);
+  }
+  
+}
+
+
+
+
+
+// LIKE // 
+@keyframes Like{
+    from{
+      opacity: 0%;
+      transform: scale(100%);
+    }75%{
+      transform: scale(115%);
+      opacity: 100%
+    }to{
+     
+      transform: scale(105%);
+      opacity: 100%;
+      color: transparent;
+      background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
+      background-clip: text;
+    }
+  } 
+
+
+  
+@keyframes Reverse {
+    from{
+      transform: scale(90%);
+      opacity: 100%;
+      color: transparent;
+      background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
+      background-clip: text;
+    }to{
+      opacity: 0%;
+      transform: scale(90%);
+      color: transparent;
+      background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
+      background-clip: text;
+    }
+  }
+
+
+  // Apparition plats . 
+
+  @keyframes Apparition{
+    from{
+      opacity: 0;
+      transform: translateY(-15%);
+      
+    }to{
+     opacity: 100%;
+     transform: translateY(0);
+    }
+  }
+

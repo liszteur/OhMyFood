@@ -1,0 +1,49 @@
+.Loader{
+    position:absolute;
+    z-index: 1;
+    inset: 0;
+    height: 300vh;
+    background-color: var(--Background-color);
+    animation-name: Disparition;
+    animation-delay:2.8s;
+    animation-fill-mode:forwards;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        border: solid var(--Secondary-color) 5px;
+        padding: 40px;
+        border-radius: 50%;
+        animation-name: Logo-spin;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        border-top: solid var( --Tertiary-color) 4px;
+        padding: 41.5px;
+        border-radius: 50%;
+        animation-name: Quick-spin;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+
+    &__logo{
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        padding: 15px;
+        font-size: 50px;
+        color: var(--Primary-color);
+        animation-name: Logo-spin;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+

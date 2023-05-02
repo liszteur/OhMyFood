@@ -1,0 +1,8 @@
+.Menu-section__img{
+     width:100%;
+     object-fit: cover;
+     height: 17.1875rem;
+     @media(min-width:65rem){
+        height: 23.9375rem;
+     }
+}

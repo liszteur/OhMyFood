@@ -192,7 +192,7 @@ a, a:hover, a:visited {
   font-size: 1.875rem;
   font-weight: 400;
   font-family: "Shrikhand", sans-serif;
-  margin: 0.3125rem 0 0.625rem 0;
+  margin: 0.3125rem 0 5px 0;
 }
 @media (min-width: 65rem) {
   .Menu-header__title {
@@ -203,7 +203,81 @@ a, a:hover, a:visited {
   font-size: 1.25rem;
   position: absolute;
   left: 25px;
-  bottom: 25px;
+  bottom: 20px;
+}
+@media (min-width: 65rem) {
+  .Menu-header__logo {
+    bottom: 30px;
+  }
+}
+
+.Menu-section__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 17.1875rem;
+}
+@media (min-width: 65rem) {
+  .Menu-section__img {
+    height: 23.9375rem;
+  }
+}
+
+.Menu-main {
+  background-color: var(--Background-color);
+  padding: 12px 13px 0 13px;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  bottom: 50px;
+  margin-bottom: -50px;
+}
+@media (min-width: 1040px) {
+  .Menu-main {
+    padding-inline: 210px;
+    margin-inline: auto;
+    width: 1055px;
+  }
+}
+.Menu-main__title {
+  position: relative;
+}
+@media (min-width: 1040px) {
+  .Menu-main__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.Menu-main__title__name {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.Menu-main__article {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.Menu-main__article__title {
+  margin: 35px 0 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.Menu-main__article__title::before {
+  content: "";
+  border: solid var(--Tertiary-color) 1.5px;
+  width: 40px;
+  margin-top: 5px;
+}
+.Menu-main__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 40px 0;
 }
 
 .Button {
@@ -213,6 +287,9 @@ a, a:hover, a:visited {
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.Button--padding {
+  padding: 16px 53px;
 }
 
 .Card {
@@ -297,26 +374,188 @@ a, a:hover, a:visited {
 }
 .Menu-card__logo--full {
   opacity: 0%;
-  animation-name: A;
-  animation-duration: 0.1s;
+  animation-name: Reverse;
+  animation-duration: 0.5s;
 }
 .Menu-card__logo--full:hover {
   animation-name: Like;
-  animation-duration: 0.1s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.Menu-card__logo--margin {
+  right: 25px;
+  top: 5px;
+}
+@media (min-width: 1040px) {
+  .Menu-card__logo--margin {
+    position: relative;
+    left: 24px;
+  }
+}
+
+@media (min-width: 1040px) {
+  .Bonus {
+    position: relative;
+    left: -4px;
+  }
+}
+
+.Loader {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  height: 300vh;
+  background-color: var(--Background-color);
+  animation-name: Disparition;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+}
+.Loader::after {
+  content: "";
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  border: solid var(--Secondary-color) 5px;
+  padding: 40px;
+  border-radius: 50%;
+  animation-name: Logo-spin;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.Loader::before {
+  content: "";
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  border-top: solid var(--Tertiary-color) 4px;
+  padding: 41.5px;
+  border-radius: 50%;
+  animation-name: Quick-spin;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.Loader__logo {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  padding: 15px;
+  font-size: 50px;
+  color: var(--Primary-color);
+  animation-name: Logo-spin;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
+.Food {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  height: 69px;
+}
+.Food__text {
+  padding: 10px 0 10px 15px;
+}
+.Food__text__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+.Food__text__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+}
+.Food__text__price {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 13px;
+  transition: 400ms;
+  overflow: hidden;
+}
+.Food__checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 100%;
+  background-color: var(--Tertiary-color);
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  transition: 400ms;
+}
+.Food__checkmark__logo {
+  color: var(--Tertiary-color);
+  padding: 3px 4px;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 14px;
+  animation-name: CheckmarkReversed;
+  animation-duration: 250ms;
+}
+.Food:hover .Food__checkmark {
+  width: 59px;
+  transition: 400ms;
+}
+.Food:hover .Food__checkmark__logo {
+  animation-name: Checkmark;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
+}
+.Food:hover .Food__text__price {
+  right: 74px;
+  transition: 400ms;
+}
+
+@keyframes Disparition {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes Logo-spin {
+  from {
+    scale: 0%;
+  }
+  to {
+    transform: rotate(-360deg);
+    scale: 200%;
+  }
+}
+@keyframes Quick-spin {
+  from {
+    scale: 0%;
+  }
+  to {
+    scale: 200%;
+    transform: rotate(2400deg);
+  }
+}
+@keyframes Checkmark {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes CheckmarkReversed {
+  to {
+    transform: rotate(-360deg);
+  }
+}
 @keyframes Like {
   from {
     opacity: 0%;
-    transform: scale(40%);
+    transform: scale(100%);
   }
   75% {
-    transform: scale(125%);
+    transform: scale(115%);
     opacity: 100%;
   }
   to {
-    transform: scale(110%);
+    transform: scale(105%);
     opacity: 100%;
     color: transparent;
     background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
@@ -324,7 +563,7 @@ a, a:hover, a:visited {
             background-clip: text;
   }
 }
-@keyframes A {
+@keyframes Reverse {
   from {
     transform: scale(90%);
     opacity: 100%;
@@ -340,5 +579,15 @@ a, a:hover, a:visited {
     background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;
             background-clip: text;
+  }
+}
+@keyframes Apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=Style.css.map */
