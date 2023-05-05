@@ -461,16 +461,23 @@ a, a:hover, a:visited {
 }
 .Food__text {
   padding: 10px 0 10px 15px;
+  overflow: hidden;
 }
 .Food__text__title {
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .Food__text__subtitle {
   font-size: 15px;
   font-weight: 300;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .Food__text__price {
   position: absolute;
@@ -479,7 +486,6 @@ a, a:hover, a:visited {
   font-weight: 700;
   font-size: 13px;
   transition: 400ms;
-  overflow: hidden;
 }
 .Food__checkmark {
   display: flex;
@@ -491,6 +497,8 @@ a, a:hover, a:visited {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   transition: 400ms;
+  margin-left: 70px;
+  flex-shrink: 0;
 }
 .Food__checkmark__logo {
   color: var(--Tertiary-color);
