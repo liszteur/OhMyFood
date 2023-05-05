@@ -77,3 +77,11 @@
       }
     }
 }
+
+@for $i from 1 through 12{
+  .Food:nth-child(#{$i}){
+    animation-name: Apparition;
+    animation-duration: ($i * 250ms);
+  }
+}
+
