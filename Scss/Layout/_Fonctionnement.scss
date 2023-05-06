@@ -4,13 +4,13 @@
 
 .Fonctionnement{
     padding:0 u.Rem(20);
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
         padding: 0 u.Rem(180);
     }
 
     &__title{
         margin: u.Rem(50) 0 u.Rem(25) 0;
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             margin-bottom: u.Rem(25);
         }
     }
@@ -20,7 +20,7 @@
         flex-direction: column;
         margin-bottom: u.Rem(60);
         gap: u.Rem(25);
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: u.Rem(36);

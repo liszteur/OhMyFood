@@ -13,7 +13,7 @@
     font-family: G.$Secondary-font;
     margin: u.Rem(5) 0 u.Rem(5) 0;
     
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
         margin: u.Rem(20) 0 u.Rem(15) 0;
     }
  }
@@ -23,7 +23,7 @@
     position: absolute;
     left: 25px;
     bottom: 20px;
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
       bottom: 30px;
     }
  }

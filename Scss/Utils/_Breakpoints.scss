@@ -1,0 +1,11 @@
+// <768     >768=Medium     >1040px= LARGE
+$breakpoints-up: (
+    "Medium":48em,
+    "Large":65em,
+);
+
+@mixin breakpoint($size) {
+    @media( min-width:map-get($breakpoints-up, $size) ){
+        @content;
+    }
+}

@@ -7,10 +7,10 @@
         text-align: center;
         font-family: G.$Secondary-font;
         margin: u.Rem(15) 0 u.Rem(5) 0;
-        @media(min-width:48rem){
+        @include u.breakpoint(Medium){
             // tablette+ // 
-            font-size: u.Rem(36);
-            margin: u.Rem(20) u.Rem(20) 0;
+            font-size: u.Rem(40);
+            margin: u.Rem(15) u.Rem(15) u.Rem(15);
         }
     }
 }

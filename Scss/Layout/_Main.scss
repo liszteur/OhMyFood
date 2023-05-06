@@ -5,13 +5,13 @@
 .Main{
     background-color: var(--Background-color);
     padding: 0 u.Rem(20) u.Rem(65) u.Rem(20);
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
         padding: 0 u.Rem(165) u.Rem(30) u.Rem(165);
     }
 
     &__title{
         padding-top: u.Rem(55);
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             margin: 0;
             padding-block: u.Rem(30);
         }
@@ -21,7 +21,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: u.Rem(20);
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             grid-template-columns: repeat(2, 1fr);
             gap: u.Rem(50) u.Rem(100)
         }

@@ -12,14 +12,14 @@
     bottom: 50px;
     margin-bottom: u.Rem(-50);
 
-    @media(min-width:1040px){
+    @include u.breakpoint(Large){
         padding-inline: u.Rem(210);
         margin-inline: auto;
         width: u.Rem(1055);
     }
     &__title{
         position: relative;
-        @media(min-width:1040px){
+        @include u.breakpoint(Large){
             display: flex;
             align-items: center;
             justify-content: center;
@@ -30,7 +30,7 @@
             font-size: u.Rem(28);
             font-weight: 400;
             margin-bottom: 0;
-            @media(max-width:345px){
+            @media(max-width:21.5625rem){
                 font-size: u.Rem(22);
             }
         }

@@ -5,7 +5,7 @@
     text-align: center;
     background-color: var(--Background-color);
     padding-bottom: u.Rem(70);
-    @media(min-width:65rem){ // 1040px // 
+    @include u.breakpoint(Large){ 
       padding-bottom: u.Rem(45);
     }
 
@@ -25,7 +25,7 @@
     }
 
     &__title{
-      @media(min-width:65rem){ 
+      @include u.breakpoint(Large){ 
         font-size:u.Rem(40);
       }
     }

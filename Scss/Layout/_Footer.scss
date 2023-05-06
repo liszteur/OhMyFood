@@ -10,7 +10,7 @@
     color: white;
     gap: u.Rem(7);
 
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
         flex-direction:row;
         position: relative;
         justify-content:end;
@@ -26,7 +26,7 @@
         font-size:u.Rem(18);
         margin-bottom: u.Rem(15);
 
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             position: absolute;
             right: 70px;
             bottom: 20px;
@@ -37,7 +37,7 @@
         margin-right: u.Rem(12);
         width: u.Rem(10);
 
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             font-size:u.Rem(12);
         }
     }
@@ -47,7 +47,7 @@
     }
 
     &--margin{
-        @media(min-width:65rem){
+        @include u.breakpoint(Large){
             margin-right: u.Rem(30);
         }
     }

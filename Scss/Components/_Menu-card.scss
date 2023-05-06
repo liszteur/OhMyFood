@@ -65,7 +65,7 @@
   &--margin{
     right: 25px;
     top: 5px;
-    @media(min-width:1040px){
+    @include u.breakpoint(Large){
       position: relative;
       left: 24px;
     }
@@ -75,8 +75,7 @@
 }
 
 .Bonus{
-  @media(min-width:1040px){
-
+  @include u.breakpoint(Large){
     position: relative;
     left: -4px;
   }
