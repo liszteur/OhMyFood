@@ -1,3 +1,6 @@
+@use '../Utils/' as u;
+// ================================================
+
 .Card{
     display: flex;
     align-items: center;
@@ -5,8 +8,8 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     position:relative;
-    height: 4.5625rem;
-    margin:0 0 0 8px;
+    height: u.Rem(73);
+    margin:0 0 0 u.Rem(8);
     cursor: pointer;
     &:hover{
         .Card__logo{
@@ -18,16 +21,16 @@
         position: absolute;
         left: -10px;
         bottom: 8px;
-        font-size: 0.8125rem;
-        padding: 0.25rem 0.5rem;
+        font-size:  u.Rem(13);
+        padding: u.Rem(4) u.Rem(8);
         border-radius: 50%;
         background-color: #9356DC;
         color: white;
     }
 
     &__logo{
-        margin: 0 1.75rem 0 2.1875rem;
-        font-size: 1.1875rem;
+        margin: 0 u.Rem(28) 0 u.Rem(35);
+        font-size: u.Rem(19);
         color: #7E7E7E;
     }
 

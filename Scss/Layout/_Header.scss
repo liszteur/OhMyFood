@@ -1,14 +1,16 @@
 @use "../Globals/" as G;
+@use '../Utils/' as u;
+// ================================================
 
 .Header{
     &__title{
         text-align: center;
         font-family: G.$Secondary-font;
-        margin: 0.9375rem 0 0.3125rem 0;
+        margin: u.Rem(15) 0 u.Rem(5) 0;
         @media(min-width:48rem){
             // tablette+ // 
-            font-size: 2.25rem;
-            margin: 1.25rem 0 1.25rem 0;
+            font-size: u.Rem(36);
+            margin: u.Rem(20) u.Rem(20) 0;
         }
     }
 }

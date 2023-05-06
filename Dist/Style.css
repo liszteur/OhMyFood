@@ -26,6 +26,85 @@ a, a:hover, a:visited {
   --Background-color: #F6F6F6;
 }
 
+@keyframes Disparition {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes Logo-spin {
+  from {
+    scale: 0%;
+  }
+  to {
+    transform: rotate(-360deg);
+    scale: 200%;
+  }
+}
+@keyframes Quick-spin {
+  from {
+    scale: 0%;
+  }
+  to {
+    scale: 200%;
+    transform: rotate(2400deg);
+  }
+}
+@keyframes Checkmark {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes CheckmarkReversed {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes Like {
+  from {
+    opacity: 0%;
+    transform: scale(100%);
+  }
+  75% {
+    transform: scale(115%);
+    opacity: 100%;
+  }
+  to {
+    transform: scale(115%);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@keyframes Reverse {
+  from {
+    transform: scale(90%);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  to {
+    opacity: 0%;
+    transform: scale(90%);
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@keyframes Apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
 .Header__title {
   text-align: center;
   font-family: "Shrikhand", sans-serif;
@@ -34,7 +113,7 @@ a, a:hover, a:visited {
 @media (min-width: 48rem) {
   .Header__title {
     font-size: 2.25rem;
-    margin: 1.25rem 0 1.25rem 0;
+    margin: 1.25rem 1.25rem 0;
   }
 }
 
@@ -192,7 +271,7 @@ a, a:hover, a:visited {
   font-size: 1.875rem;
   font-weight: 400;
   font-family: "Shrikhand", sans-serif;
-  margin: 0.3125rem 0 5px 0;
+  margin: 0.3125rem 0 0.3125rem 0;
 }
 @media (min-width: 65rem) {
   .Menu-header__title {
@@ -225,17 +304,17 @@ a, a:hover, a:visited {
 
 .Menu-main {
   background-color: var(--Background-color);
-  padding: 12px 13px 0 13px;
+  padding: 0.75rem 0.8125rem 0 0.8125rem;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 50px;
-  margin-bottom: -50px;
+  margin-bottom: -3.125rem;
 }
 @media (min-width: 1040px) {
   .Menu-main {
-    padding-inline: 210px;
+    padding-inline: 13.125rem;
     margin-inline: auto;
-    width: 1055px;
+    width: 65.9375rem;
   }
 }
 .Menu-main__title {
@@ -250,25 +329,25 @@ a, a:hover, a:visited {
 }
 .Menu-main__title__name {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   margin-bottom: 0;
 }
 @media (max-width: 345px) {
   .Menu-main__title__name {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 .Menu-main__article {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 0.75rem;
 }
 .Menu-main__article__title {
-  margin: 35px 0 0 0;
+  margin: 2.1875rem 0 0 0;
   display: flex;
   flex-direction: column-reverse;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   animation-name: Apparition;
@@ -277,14 +356,14 @@ a, a:hover, a:visited {
 .Menu-main__article__title::before {
   content: "";
   border: solid var(--Tertiary-color) 1.5px;
-  width: 40px;
-  margin-top: 5px;
+  width: 2.5rem;
+  margin-top: 0.3125rem;
 }
 .Menu-main__section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0 40px 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .Button {
@@ -296,7 +375,7 @@ a, a:hover, a:visited {
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .Button--padding {
-  padding: 16px 53px;
+  padding: 1rem 3.3125rem;
 }
 .Button:hover {
   transition: 400ms;
@@ -312,7 +391,7 @@ a, a:hover, a:visited {
   border-radius: 20px;
   position: relative;
   height: 4.5625rem;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 0.5rem;
   cursor: pointer;
 }
 .Card:hover .Card__logo {
@@ -374,7 +453,7 @@ a, a:hover, a:visited {
   font-size: 1.125rem;
 }
 .Menu-card__text {
-  margin: 3px 0 0 0;
+  margin: 0.1875rem 0 0 0;
   font-size: 1.0625rem;
   font-weight: 300;
 }
@@ -427,7 +506,7 @@ a, a:hover, a:visited {
 .Loader::after {
   content: "";
   border: solid var(--Secondary-color) 5px;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 50%;
   animation-name: Logo-spin;
   animation-duration: 1s;
@@ -437,7 +516,7 @@ a, a:hover, a:visited {
   content: "";
   position: absolute;
   border-top: solid var(--Tertiary-color) 4px;
-  padding: 41.5px;
+  padding: 2.59375rem;
   border-radius: 50%;
   animation-name: Quick-spin;
   animation-duration: 3s;
@@ -445,8 +524,8 @@ a, a:hover, a:visited {
 }
 .Loader__logo {
   position: absolute;
-  padding: 15px;
-  font-size: 50px;
+  padding: 0.9375rem;
+  font-size: 3.125rem;
   color: var(--Primary-color);
   animation-name: Logo-spin;
   animation-duration: 3s;
@@ -462,23 +541,23 @@ a, a:hover, a:visited {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-  height: 69px;
+  height: 4.3125rem;
   cursor: pointer;
 }
 .Food__text {
-  padding: 10px 0 10px 15px;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
   overflow: hidden;
 }
 .Food__text__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
-  margin: 0 0 5px 0;
+  margin: 0 0 0.3125rem 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .Food__text__subtitle {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 300;
   margin: 0;
   text-overflow: ellipsis;
@@ -490,7 +569,7 @@ a, a:hover, a:visited {
   right: 15px;
   bottom: 0;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.8125rem;
   transition: 400ms;
 }
 .Food__checkmark {
@@ -503,20 +582,20 @@ a, a:hover, a:visited {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   transition: 400ms;
-  margin-left: 70px;
+  margin-left: 4.375rem;
   flex-shrink: 0;
 }
 .Food__checkmark__logo {
   color: var(--Tertiary-color);
-  padding: 3px 4px;
+  padding: 0.1875rem 0.25rem;
   border-radius: 50%;
   background-color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   animation-name: CheckmarkReversed;
   animation-duration: 250ms;
 }
 .Food:hover .Food__checkmark {
-  width: 59px;
+  width: 3.6875rem;
   transition: 400ms;
 }
 .Food:hover .Food__checkmark__logo {
@@ -587,84 +666,4 @@ a, a:hover, a:visited {
 .Food:nth-child(12) {
   animation-name: Apparition;
   animation-duration: 3000ms;
-}
-
-@keyframes Disparition {
-  to {
-    visibility: hidden;
-  }
-}
-@keyframes Logo-spin {
-  from {
-    scale: 0%;
-  }
-  to {
-    transform: rotate(-360deg);
-    scale: 200%;
-  }
-}
-@keyframes Quick-spin {
-  from {
-    scale: 0%;
-  }
-  to {
-    scale: 200%;
-    transform: rotate(2400deg);
-  }
-}
-@keyframes Checkmark {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes CheckmarkReversed {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes Like {
-  from {
-    opacity: 0%;
-    transform: scale(100%);
-  }
-  75% {
-    transform: scale(115%);
-    opacity: 100%;
-  }
-  to {
-    transform: scale(115%);
-    opacity: 100%;
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-}
-@keyframes Reverse {
-  from {
-    transform: scale(90%);
-    opacity: 100%;
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  to {
-    opacity: 0%;
-    transform: scale(90%);
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-}
-@keyframes Apparition {
-  from {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-  to {
-    opacity: 100%;
-    transform: translateY(0);
-  }
 }/*# sourceMappingURL=Style.css.map */

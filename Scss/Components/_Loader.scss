@@ -1,3 +1,6 @@
+@use '../Utils/' as u;
+// ================================================
+
 .Loader{
     justify-content: center;
     align-items: center;
@@ -13,7 +16,7 @@
     &::after{
         content: '';
         border: solid var(--Secondary-color) 5px;
-        padding: 40px;
+        padding: u.Rem(40);
         border-radius: 50%;
         animation-name: Logo-spin;
         animation-duration: 1s;
@@ -23,7 +26,7 @@
         content: '';
         position: absolute;
         border-top: solid var( --Tertiary-color) 4px;
-        padding: 41.5px;
+        padding: u.Rem(41.5);
         border-radius: 50%;
         animation-name: Quick-spin;
         animation-duration: 3s;
@@ -32,8 +35,8 @@
 
     &__logo{
         position: absolute;
-        padding: 15px;
-        font-size: 50px;
+        padding: u.Rem(15);
+        font-size: u.Rem(50);
         color: var(--Primary-color);
         animation-name: Logo-spin;
         animation-duration: 3s;

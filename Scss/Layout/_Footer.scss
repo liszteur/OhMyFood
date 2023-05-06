@@ -1,28 +1,30 @@
 @use "../Globals/" as G;
+@use '../Utils/' as u;
+// ================================================
 
 .Footer{
     display: flex;
     flex-direction: column;
-    padding: 0 0 1.5625rem 1.5625rem;
+    padding: 0 0 u.Rem(25) u.Rem(25);
     background-color:#353535;
     color: white;
-    gap: 0.4375rem;
+    gap: u.Rem(7);
 
     @media(min-width:65rem){
         flex-direction:row;
         position: relative;
         justify-content:end;
         align-items: end;
-        padding: 0 15.625rem 2.1875rem 0;
-        height: 7.125rem;
-        gap: 1.25rem;
+        padding: 0 u.Rem(250) u.Rem(35) 0;
+        height: u.Rem(114);
+        gap: u.Rem(20);
     }
 
     &__title{
         font-family: G.$Secondary-font;
         font-weight: 400;
-        font-size:1.125rem;
-        margin-bottom: 0.9375rem;
+        font-size:u.Rem(18);
+        margin-bottom: u.Rem(15);
 
         @media(min-width:65rem){
             position: absolute;
@@ -32,11 +34,11 @@
     }
 
     &__logo{
-        margin-right: 0.75rem;
-        width: 0.625rem;
+        margin-right: u.Rem(12);
+        width: u.Rem(10);
 
         @media(min-width:65rem){
-            font-size:0.75rem;
+            font-size:u.Rem(12);
         }
     }
 
@@ -46,7 +48,7 @@
 
     &--margin{
         @media(min-width:65rem){
-            margin-right: 1.875rem;
+            margin-right: u.Rem(30);
         }
     }
 }

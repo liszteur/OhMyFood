@@ -1,3 +1,6 @@
+@use '../Utils/' as u;
+// ================================================
+
 .Food{
     position: relative;
     display: flex;
@@ -7,24 +10,24 @@
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    height: 69px;
+    height: u.Rem(69);
     cursor: pointer;
 
     &__text{
-        padding: 10px 0 10px 15px;
+        padding: u.Rem(10) 0 u.Rem(10) u.Rem(15);
         overflow: hidden;
 
         &__title{
-            font-size: 18px;
+            font-size: u.Rem(18);
             font-weight: 500;
-            margin: 0 0 5px 0;
+            margin: 0 0 u.Rem(5) 0;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }
 
         &__subtitle{
-            font-size: 15px;
+            font-size: u.Rem(15);
             font-weight: 300;
             margin: 0;
             text-overflow: ellipsis;
@@ -37,7 +40,7 @@
             right: 15px;
             bottom: 0;
             font-weight: 700;
-            font-size: 13px;
+            font-size: u.Rem(13);
             transition: 400ms;
         }
     }
@@ -52,15 +55,15 @@
         border-radius: 0 15px 15px 0;
         overflow: hidden;
         transition: 400ms;
-        margin-left: 70px;
+        margin-left: u.Rem(70);
         flex-shrink: 0;
 
         &__logo{
             color: var(--Tertiary-color);
-            padding: 3px 4px;
+            padding: u.Rem(3) u.Rem(4);
             border-radius: 50%;
             background-color: white;
-            font-size: 14px;
+            font-size: u.Rem(14);
             animation-name: CheckmarkReversed;
             animation-duration: 250ms; // Bug visuel si valeur = 400ms
           }
@@ -69,7 +72,7 @@
 
     &:hover{
       .Food__checkmark{
-        width: 59px;
+        width: u.Rem(59);
         transition: 400ms; 
       }
 

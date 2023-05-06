@@ -1,19 +1,21 @@
 @use "../../Globals/" as Globals; 
+@use '../../Utils/' as u;
+// ================================================
 // Globals.$font; 
 
     
 .Menu-main{
     background-color: var(--Background-color);
-    padding: 12px 13px 0 13px;
+    padding: u.Rem(12) u.Rem(13) 0 u.Rem(13);
     border-radius: 30px 30px 0 0;
     position: relative;
     bottom: 50px;
-    margin-bottom: -50px;
+    margin-bottom: u.Rem(-50);
 
     @media(min-width:1040px){
-        padding-inline: 210px;
+        padding-inline: u.Rem(210);
         margin-inline: auto;
-        width: 1055px;
+        width: u.Rem(1055);
     }
     &__title{
         position: relative;
@@ -25,11 +27,11 @@
 
         &__name{
             font-family:Globals.$Secondary-font;
-            font-size: 28px;
+            font-size: u.Rem(28);
             font-weight: 400;
             margin-bottom: 0;
             @media(max-width:345px){
-                font-size: 22px;
+                font-size: u.Rem(22);
             }
         }
 
@@ -38,14 +40,14 @@
     &__article{
         display: grid;
         grid-template-columns: 1fr ;
-        gap: 12px;
+        gap: u.Rem(12);
       
 
         &__title{
-            margin: 35px 0 0 0;
+            margin: u.Rem(35) 0 0 0;
             display: flex;
             flex-direction: column-reverse;
-            font-size:16px;
+            font-size: u.Rem(16);
             font-weight: 300;
             text-transform: uppercase;
             animation-name: Apparition;
@@ -55,8 +57,8 @@
             &::before{
                 content: '';
                 border: solid var(--Tertiary-color) 1.5px;
-                width: 40px;
-                margin-top: 5px;
+                width: u.Rem(40);
+                margin-top: u.Rem(5);
             }
         }
     }
@@ -65,7 +67,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 40px 0 40px 0;
+        padding: u.Rem(40) 0 u.Rem(40) 0;
     }
 }
 
