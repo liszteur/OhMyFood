@@ -1,8 +1,7 @@
 @use "../../Globals/" as Globals; 
 // Globals.$font; 
 
-
-
+    
 .Menu-main{
     background-color: var(--Background-color);
     padding: 12px 13px 0 13px;
@@ -29,8 +28,11 @@
             font-size: 28px;
             font-weight: 400;
             margin-bottom: 0;
-        
+            @media(max-width:345px){
+                font-size: 22px;
+            }
         }
+
     }
 
     &__article{

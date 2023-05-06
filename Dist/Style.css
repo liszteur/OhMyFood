@@ -254,6 +254,11 @@ a, a:hover, a:visited {
   font-weight: 400;
   margin-bottom: 0;
 }
+@media (max-width: 345px) {
+  .Menu-main__title__name {
+    font-size: 22px;
+  }
+}
 .Menu-main__article {
   display: grid;
   grid-template-columns: 1fr;
@@ -458,6 +463,7 @@ a, a:hover, a:visited {
   background-color: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   height: 69px;
+  cursor: pointer;
 }
 .Food__text {
   padding: 10px 0 10px 15px;
