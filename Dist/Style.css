@@ -113,7 +113,7 @@ a, a:hover, a:visited {
 @media (min-width: 48em) {
   .Header__title {
     font-size: 2.5rem;
-    margin: 0.9375rem 0.9375rem 0.9375rem;
+    margin: 0.9375rem 0.9375rem 1.5625rem 0.9375rem;
   }
 }
 
@@ -275,7 +275,7 @@ a, a:hover, a:visited {
 }
 @media (min-width: 65em) {
   .Menu-header__title {
-    margin: 1.25rem 0 0.9375rem 0;
+    margin: 0.9375rem 0 1.25rem 0;
   }
 }
 .Menu-header__logo {
@@ -307,18 +307,16 @@ a, a:hover, a:visited {
   padding: 0.75rem 0.8125rem 0 0.8125rem;
   border-radius: 30px 30px 0 0;
   position: relative;
-  bottom: 50px;
+  bottom: 40px;
   margin-bottom: -3.125rem;
 }
 @media (min-width: 65em) {
   .Menu-main {
     padding-inline: 13.125rem;
+    padding: 1.875rem 13.125rem 1.25rem 13.125rem;
     margin-inline: auto;
     width: 65.9375rem;
   }
-}
-.Menu-main__title {
-  position: relative;
 }
 @media (min-width: 65em) {
   .Menu-main__title {
@@ -582,7 +580,7 @@ a, a:hover, a:visited {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   transition: 400ms;
-  margin-left: 4.375rem;
+  margin-left: 2.8125rem;
   flex-shrink: 0;
 }
 .Food__checkmark__logo {

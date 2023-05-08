@@ -9,16 +9,16 @@
     padding: u.Rem(12) u.Rem(13) 0 u.Rem(13);
     border-radius: 30px 30px 0 0;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     margin-bottom: u.Rem(-50);
 
     @include u.breakpoint(Large){
         padding-inline: u.Rem(210);
+        padding: u.Rem(30) u.Rem(210) u.Rem(20) u.Rem(210);
         margin-inline: auto;
         width: u.Rem(1055);
     }
     &__title{
-        position: relative;
         @include u.breakpoint(Large){
             display: flex;
             align-items: center;

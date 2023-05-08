@@ -10,7 +10,7 @@
         @include u.breakpoint(Medium){
             // tablette+ // 
             font-size: u.Rem(40);
-            margin: u.Rem(15) u.Rem(15) u.Rem(15);
+            margin: u.Rem(15) u.Rem(15) u.Rem(25) u.Rem(15);
         }
     }
 }
