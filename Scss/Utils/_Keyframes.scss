@@ -7,25 +7,23 @@
 
 @keyframes Logo-spin{
     from{
-    scale: 0%;
+    transform: scale(0);
     }to{
-    transform: rotate(-360deg);
-    scale: 200%;
+    transform:scale(2) rotate(-360deg);
     }
 }
 
 @keyframes Quick-spin{
     from{
-        scale: 0%;
+      transform: scale(0);
     }to{
-        scale: 200%;
-        transform: rotate(2400deg);
+        transform: scale(2) rotate(2400deg);
     }
 } 
 
 
 
-// Page des Menu // 
+// Page des Menus // 
 
 @keyframes Checkmark{
     to{
@@ -48,13 +46,13 @@
 @keyframes Like{
     from{
       opacity: 0%;
-      transform: scale(100%);
+      transform: scale(1);
     }75%{
-      transform: scale(115%);
+      transform: scale(1.15);
       opacity: 100%
     }to{
      
-      transform: scale(115%);
+      transform: scale(1.15);
       opacity: 100%;
       color: transparent;
       background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
@@ -66,14 +64,14 @@
   
 @keyframes Reverse {
     from{
-      transform: scale(90%);
+      transform: scale(0.9);
       opacity: 100%;
       color: transparent;
       background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
       background-clip: text;
     }to{
       opacity: 0%;
-      transform: scale(90%);
+      transform: scale(0.9);
       color: transparent;
       background-image: linear-gradient( #9356DC -11.44%, #FF79DA 123.93%);
       background-clip: text;

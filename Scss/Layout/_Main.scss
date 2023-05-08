@@ -1,25 +1,29 @@
+@use '../Utils/' as u;
+// ================================================
+
+
 .Main{
     background-color: var(--Background-color);
-    padding: 0 1.25rem 4.0625rem 1.25rem;
-    @media(min-width:65rem){
-        padding: 0 10.3125rem 1.875rem 10.3125rem;
+    padding: 0 u.Rem(20) u.Rem(65) u.Rem(20);
+    @include u.breakpoint(Large){
+        padding: 0 u.Rem(165) u.Rem(30) u.Rem(165);
     }
 
     &__title{
-        padding-top: 3.4375rem;
-        @media(min-width:65rem){
+        padding-top: u.Rem(55);
+        @include u.breakpoint(Large){
             margin: 0;
-            padding-block: 1.875rem;
+            padding-block: u.Rem(30);
         }
     }
 
     &__nav{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 1.25rem;
-        @media(min-width:65rem){
+        gap: u.Rem(20);
+        @include u.breakpoint(Large){
             grid-template-columns: repeat(2, 1fr);
-            gap: 3.125rem 6.25rem
+            gap: u.Rem(50) u.Rem(100)
         }
     }
 }

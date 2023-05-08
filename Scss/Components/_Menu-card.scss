@@ -1,3 +1,6 @@
+@use '../Utils/' as u;
+// ================================================
+
 .Menu-card{
   display: flex;
   flex-direction: column;
@@ -8,7 +11,7 @@
   cursor: pointer;
 
   &__img{
-    height: 10.875rem;
+    height: u.Rem(174);
     object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
@@ -18,28 +21,28 @@
     right: 15px;
     top: 15px;
     border-radius: 2px;
-    padding: 0.4375rem 0.875rem;
-    font-size: 0.875rem;
+    padding: u.Rem(7) u.Rem(14);
+    font-size: u.Rem(14);
     font-weight: 500;
     background-color: #99E2D0;
     color: #008766;
   }
 
   &__figcaption{
-    height: 4.8125rem;
-    padding: 0.9375rem;
+    height: u.Rem(77);
+    padding: u.Rem(15);
     position: relative;
     color: black;
   }
 
   &__title{
     margin:0;
-    font-size:1.125rem;
+    font-size:u.Rem(18);
   }
 
   &__text{
-    margin: 3px 0 0 0 ;
-    font-size:1.0625rem;
+    margin: u.Rem(3) 0 0 0 ;
+    font-size:u.Rem(17);
     font-weight: 300;
   }
 
@@ -47,7 +50,7 @@
     position: absolute;
     top:20px;
     right: 25px;
-    font-size: 1.75rem;
+    font-size: u.Rem(28);
     
     &--full{
       opacity: 0%;
@@ -62,7 +65,7 @@
   &--margin{
     right: 25px;
     top: 5px;
-    @media(min-width:1040px){
+    @include u.breakpoint(Large){
       position: relative;
       left: 24px;
     }
@@ -72,8 +75,7 @@
 }
 
 .Bonus{
-  @media(min-width:1040px){
-
+  @include u.breakpoint(Large){
     position: relative;
     left: -4px;
   }

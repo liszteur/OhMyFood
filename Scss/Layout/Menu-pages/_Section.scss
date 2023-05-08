@@ -1,8 +1,11 @@
+@use '../../Utils/' as u;
+// ================================================
+
 .Menu-section__img{
      width:100%;
      object-fit: cover;
-     height: 17.1875rem;
-     @media(min-width:65rem){
-        height: 23.9375rem;
+     height: u.Rem(275);
+     @include u.breakpoint(Large){
+        height: u.Rem(383);
      }
 }

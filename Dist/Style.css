@@ -26,15 +26,92 @@ a, a:hover, a:visited {
   --Background-color: #F6F6F6;
 }
 
+@keyframes Disparition {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes Logo-spin {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2) rotate(-360deg);
+  }
+}
+@keyframes Quick-spin {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(2) rotate(2400deg);
+  }
+}
+@keyframes Checkmark {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes CheckmarkReversed {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes Like {
+  from {
+    opacity: 0%;
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.15);
+    opacity: 100%;
+  }
+  to {
+    transform: scale(1.15);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@keyframes Reverse {
+  from {
+    transform: scale(0.9);
+    opacity: 100%;
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  to {
+    opacity: 0%;
+    transform: scale(0.9);
+    color: transparent;
+    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+@keyframes Apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
 .Header__title {
   text-align: center;
   font-family: "Shrikhand", sans-serif;
   margin: 0.9375rem 0 0.3125rem 0;
 }
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
   .Header__title {
-    font-size: 2.25rem;
-    margin: 1.25rem 0 1.25rem 0;
+    font-size: 2.5rem;
+    margin: 0.9375rem 0.9375rem 1.5625rem 0.9375rem;
   }
 }
 
@@ -43,7 +120,7 @@ a, a:hover, a:visited {
   background-color: var(--Background-color);
   padding-bottom: 4.375rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Under-Header {
     padding-bottom: 2.8125rem;
   }
@@ -61,7 +138,7 @@ a, a:hover, a:visited {
 .Under-Header__localisation__logo {
   padding-right: 0.9375rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Under-Header__title {
     font-size: 2.5rem;
   }
@@ -76,7 +153,7 @@ a, a:hover, a:visited {
 .Fonctionnement {
   padding: 0 1.25rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Fonctionnement {
     padding: 0 11.25rem;
   }
@@ -84,7 +161,7 @@ a, a:hover, a:visited {
 .Fonctionnement__title {
   margin: 3.125rem 0 1.5625rem 0;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Fonctionnement__title {
     margin-bottom: 1.5625rem;
   }
@@ -95,7 +172,7 @@ a, a:hover, a:visited {
   margin-bottom: 3.75rem;
   gap: 1.5625rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Fonctionnement__div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,7 +184,7 @@ a, a:hover, a:visited {
   background-color: var(--Background-color);
   padding: 0 1.25rem 4.0625rem 1.25rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Main {
     padding: 0 10.3125rem 1.875rem 10.3125rem;
   }
@@ -115,7 +192,7 @@ a, a:hover, a:visited {
 .Main__title {
   padding-top: 3.4375rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Main__title {
     margin: 0;
     padding-block: 1.875rem;
@@ -126,7 +203,7 @@ a, a:hover, a:visited {
   grid-template-columns: repeat(1, 1fr);
   gap: 1.25rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Main__nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 3.125rem 6.25rem;
@@ -141,7 +218,7 @@ a, a:hover, a:visited {
   color: white;
   gap: 0.4375rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Footer {
     flex-direction: row;
     position: relative;
@@ -158,7 +235,7 @@ a, a:hover, a:visited {
   font-size: 1.125rem;
   margin-bottom: 0.9375rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Footer__title {
     position: absolute;
     right: 70px;
@@ -169,7 +246,7 @@ a, a:hover, a:visited {
   margin-right: 0.75rem;
   width: 0.625rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Footer__logo {
     font-size: 0.75rem;
   }
@@ -177,7 +254,7 @@ a, a:hover, a:visited {
 .Footer__link {
   color: white;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Footer--margin {
     margin-right: 1.875rem;
   }
@@ -192,11 +269,11 @@ a, a:hover, a:visited {
   font-size: 1.875rem;
   font-weight: 400;
   font-family: "Shrikhand", sans-serif;
-  margin: 0.3125rem 0 5px 0;
+  margin: 0.3125rem 0 0.3125rem 0;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Menu-header__title {
-    margin: 1.25rem 0 0.9375rem 0;
+    margin: 0.9375rem 0 1.25rem 0;
   }
 }
 .Menu-header__logo {
@@ -205,7 +282,7 @@ a, a:hover, a:visited {
   left: 25px;
   bottom: 20px;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Menu-header__logo {
     bottom: 30px;
   }
@@ -217,7 +294,7 @@ a, a:hover, a:visited {
      object-fit: cover;
   height: 17.1875rem;
 }
-@media (min-width: 65rem) {
+@media (min-width: 65em) {
   .Menu-section__img {
     height: 23.9375rem;
   }
@@ -225,23 +302,21 @@ a, a:hover, a:visited {
 
 .Menu-main {
   background-color: var(--Background-color);
-  padding: 12px 13px 0 13px;
+  padding: 0.75rem 0.8125rem 0 0.8125rem;
   border-radius: 30px 30px 0 0;
   position: relative;
-  bottom: 50px;
-  margin-bottom: -50px;
+  bottom: 40px;
+  margin-bottom: -3.125rem;
 }
-@media (min-width: 1040px) {
+@media (min-width: 65em) {
   .Menu-main {
-    padding-inline: 210px;
+    padding-inline: 13.125rem;
+    padding: 1.875rem 13.125rem 1.25rem 13.125rem;
     margin-inline: auto;
-    width: 1055px;
+    width: 65.9375rem;
   }
 }
-.Menu-main__title {
-  position: relative;
-}
-@media (min-width: 1040px) {
+@media (min-width: 65em) {
   .Menu-main__title {
     display: flex;
     align-items: center;
@@ -250,25 +325,25 @@ a, a:hover, a:visited {
 }
 .Menu-main__title__name {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   margin-bottom: 0;
 }
-@media (max-width: 345px) {
+@media (max-width: 21.5625rem) {
   .Menu-main__title__name {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }
 .Menu-main__article {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 0.75rem;
 }
 .Menu-main__article__title {
-  margin: 35px 0 0 0;
+  margin: 2.1875rem 0 0 0;
   display: flex;
   flex-direction: column-reverse;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   animation-name: Apparition;
@@ -277,14 +352,14 @@ a, a:hover, a:visited {
 .Menu-main__article__title::before {
   content: "";
   border: solid var(--Tertiary-color) 1.5px;
-  width: 40px;
-  margin-top: 5px;
+  width: 2.5rem;
+  margin-top: 0.3125rem;
 }
 .Menu-main__section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 0 40px 0;
+  padding: 2.5rem 0 2.5rem 0;
 }
 
 .Button {
@@ -296,7 +371,7 @@ a, a:hover, a:visited {
   background: linear-gradient(360deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .Button--padding {
-  padding: 16px 53px;
+  padding: 1rem 3.3125rem;
 }
 .Button:hover {
   transition: 400ms;
@@ -312,7 +387,7 @@ a, a:hover, a:visited {
   border-radius: 20px;
   position: relative;
   height: 4.5625rem;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 0.5rem;
   cursor: pointer;
 }
 .Card:hover .Card__logo {
@@ -374,7 +449,7 @@ a, a:hover, a:visited {
   font-size: 1.125rem;
 }
 .Menu-card__text {
-  margin: 3px 0 0 0;
+  margin: 0.1875rem 0 0 0;
   font-size: 1.0625rem;
   font-weight: 300;
 }
@@ -398,14 +473,14 @@ a, a:hover, a:visited {
   right: 25px;
   top: 5px;
 }
-@media (min-width: 1040px) {
+@media (min-width: 65em) {
   .Menu-card__logo--margin {
     position: relative;
     left: 24px;
   }
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 65em) {
   .Bonus {
     position: relative;
     left: -4px;
@@ -427,7 +502,7 @@ a, a:hover, a:visited {
 .Loader::after {
   content: "";
   border: solid var(--Secondary-color) 5px;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 50%;
   animation-name: Logo-spin;
   animation-duration: 1s;
@@ -437,7 +512,7 @@ a, a:hover, a:visited {
   content: "";
   position: absolute;
   border-top: solid var(--Tertiary-color) 4px;
-  padding: 41.5px;
+  padding: 2.59375rem;
   border-radius: 50%;
   animation-name: Quick-spin;
   animation-duration: 3s;
@@ -445,8 +520,8 @@ a, a:hover, a:visited {
 }
 .Loader__logo {
   position: absolute;
-  padding: 15px;
-  font-size: 50px;
+  padding: 0.9375rem;
+  font-size: 3.125rem;
   color: var(--Primary-color);
   animation-name: Logo-spin;
   animation-duration: 3s;
@@ -462,23 +537,23 @@ a, a:hover, a:visited {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-  height: 69px;
+  height: 4.3125rem;
   cursor: pointer;
 }
 .Food__text {
-  padding: 10px 0 10px 15px;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
   overflow: hidden;
 }
 .Food__text__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
-  margin: 0 0 5px 0;
+  margin: 0 0 0.3125rem 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .Food__text__subtitle {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 300;
   margin: 0;
   text-overflow: ellipsis;
@@ -490,7 +565,7 @@ a, a:hover, a:visited {
   right: 15px;
   bottom: 0;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.8125rem;
   transition: 400ms;
 }
 .Food__checkmark {
@@ -503,20 +578,20 @@ a, a:hover, a:visited {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   transition: 400ms;
-  margin-left: 70px;
+  margin-left: 2.8125rem;
   flex-shrink: 0;
 }
 .Food__checkmark__logo {
   color: var(--Tertiary-color);
-  padding: 3px 4px;
+  padding: 0.1875rem 0.25rem;
   border-radius: 50%;
   background-color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   animation-name: CheckmarkReversed;
   animation-duration: 250ms;
 }
 .Food:hover .Food__checkmark {
-  width: 59px;
+  width: 3.6875rem;
   transition: 400ms;
 }
 .Food:hover .Food__checkmark__logo {
@@ -587,84 +662,4 @@ a, a:hover, a:visited {
 .Food:nth-child(12) {
   animation-name: Apparition;
   animation-duration: 3000ms;
-}
-
-@keyframes Disparition {
-  to {
-    visibility: hidden;
-  }
-}
-@keyframes Logo-spin {
-  from {
-    scale: 0%;
-  }
-  to {
-    transform: rotate(-360deg);
-    scale: 200%;
-  }
-}
-@keyframes Quick-spin {
-  from {
-    scale: 0%;
-  }
-  to {
-    scale: 200%;
-    transform: rotate(2400deg);
-  }
-}
-@keyframes Checkmark {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes CheckmarkReversed {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes Like {
-  from {
-    opacity: 0%;
-    transform: scale(100%);
-  }
-  75% {
-    transform: scale(115%);
-    opacity: 100%;
-  }
-  to {
-    transform: scale(115%);
-    opacity: 100%;
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-}
-@keyframes Reverse {
-  from {
-    transform: scale(90%);
-    opacity: 100%;
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  to {
-    opacity: 0%;
-    transform: scale(90%);
-    color: transparent;
-    background-image: linear-gradient(#9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-}
-@keyframes Apparition {
-  from {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-  to {
-    opacity: 100%;
-    transform: translateY(0);
-  }
 }/*# sourceMappingURL=Style.css.map */

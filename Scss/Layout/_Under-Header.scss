@@ -1,9 +1,12 @@
+@use '../Utils/' as u;
+// ================================================
+
 .Under-Header{
     text-align: center;
     background-color: var(--Background-color);
-    padding-bottom: 4.375rem;
-    @media(min-width:65rem){ // 1040px // 
-      padding-bottom: 2.8125rem;
+    padding-bottom: u.Rem(70);
+    @include u.breakpoint(Large){ 
+      padding-bottom: u.Rem(45);
     }
 
     &__localisation{
@@ -14,24 +17,24 @@
       align-items: center;
       justify-content: center;
       font-weight: 500;
-      margin-bottom:2.5rem;
+      margin-bottom:u.Rem(40);
 
        &__logo{
-         padding-right: 0.9375rem;
+         padding-right: u.Rem(15);
        }
     }
 
     &__title{
-      @media(min-width:65rem){ 
-        font-size:2.5rem;
+      @include u.breakpoint(Large){ 
+        font-size:u.Rem(40);
       }
     }
 
     &__text{
-      font-size: 1.125rem;
+      font-size: u.Rem(18);
       font-weight: 300;
       color: #353535;
-      margin-bottom: 2.8125rem;
+      margin-bottom: u.Rem(45);
     }
     
 }

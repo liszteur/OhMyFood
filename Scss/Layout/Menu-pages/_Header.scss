@@ -1,4 +1,6 @@
 @use "../../Globals/" as G;
+@use '../../Utils/' as u;
+// ================================================
 
 .Menu-header{
  display: flex;
@@ -6,22 +8,22 @@
  position: relative;
 
  &__title{
-    font-size: 1.875rem;
+    font-size: u.Rem(30);
     font-weight: 400;
     font-family: G.$Secondary-font;
-    margin: 0.3125rem 0 5px 0;
+    margin: u.Rem(5) 0 u.Rem(5) 0;
     
-    @media(min-width:65rem){
-        margin: 1.25rem 0 0.9375rem 0;
+    @include u.breakpoint(Large){
+        margin: u.Rem(15) 0 u.Rem(20) 0;
     }
  }
 
  &__logo{
-    font-size:1.25rem;
+    font-size:u.Rem(20);
     position: absolute;
     left: 25px;
     bottom: 20px;
-    @media(min-width:65rem){
+    @include u.breakpoint(Large){
       bottom: 30px;
     }
  }
