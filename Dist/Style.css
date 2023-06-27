@@ -471,12 +471,13 @@ a, a:hover, a:visited {
 }
 .Menu-card__logo--margin {
   right: 25px;
-  top: 5px;
+  top: 33px;
 }
 @media (min-width: 65em) {
   .Menu-card__logo--margin {
     position: relative;
     left: 24px;
+    top: 7px;
   }
 }
 
@@ -662,4 +663,9 @@ a, a:hover, a:visited {
 .Food:nth-child(12) {
   animation-name: Apparition;
   animation-duration: 3000ms;
+}
+
+.Food:nth-child(13) {
+  animation-name: Apparition;
+  animation-duration: 3250ms;
 }/*# sourceMappingURL=Style.css.map */
